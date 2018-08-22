@@ -1,0 +1,94 @@
+* {
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: inherit;
+    color: rgb(136, 85, 187);    
+}
+
+.fake-link {
+    cursor: pointer;
+}
+
+.fake-link.current {
+    cursor: default;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(17, 17, 34);
+    padding: 20px 40px;
+    z-index: 1;
+    box-shadow: black 0px 1px 5px 2px;    
+}
+
+#name {
+    font-size: 52px;
+    color: rgb(102, 153, 102);
+    text-shadow: black 2px 2px;
+    flex-grow: 1;
+}
+
+#menu {
+    align-self: center;
+    font: 36px Arial;
+    color: rgb(238, 204, 204);
+    text-shadow: black 0px 0px 10px;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#menu .current {
+    color: #C77;
+}
+
+#menu .spacer {
+    margin: 0px 10px;
+}
+
+#content {
+    background-color: rgb(34, 34, 34);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#footer {
+    align-self: center;
+    color: #777;
+}
+
+.language {
+    color: #F88;
+}
+
+.inset {
+    color: rgb(221, 221, 255);
+    margin: 40px;
+    border-radius: 20px;
+    background-color: rgb(17, 17, 17);
+    padding: 1em 2em;
+    font-size: 1.8em;
+    flex-grow: 1;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px inset;
+    word-wrap: break-word;
+}
+
+.project {
+    margin-bottom: 2em;
+}
