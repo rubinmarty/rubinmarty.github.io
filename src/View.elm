@@ -93,7 +93,7 @@ aboutNode =
 
         content =
             [ line "Welcome to my website."
-            , line "I'm Marty and sometimes I write code."
+            , line "My name is Marty, and I'm a junior studying math, computer science, and philosophy at the University of Pennsylvania."
             , line "Check out the 'Projects' tab to see some of the stuff I've made that's up on GitHub."
             , line "To contact me, see the 'Contact' tab."
             ]
@@ -111,24 +111,27 @@ projectNode { name, description, language, hasPages } =
             "https://rubinmarty.github.io/" ++ name
 
         delim =
-            text " - "
+            text " "
 
         titleNode =
-            if hasPages then
-                linkNode pagesLink
-
-            else
-                span
+            linkNode gitHubLink
 
         title =
             titleNode [] [ text name ]
 
         languageTag =
-            linkNode gitHubLink [ class "language" ] [ text <| "(" ++ language ++ " src)" ]
+            span [ class "language" ] [ text <| "(" ++ language ++ ")" ]
+
+        tryItLink =
+            if hasPages then
+                linkNode pagesLink [ class "try-it" ] [ text "Try it!" ]
+
+            else
+                text ""
     in
     Html.p
         [ class "project" ]
-        [ Html.b [] [ title, delim, languageTag ]
+        [ Html.b [] [ title, tryItLink, delim, languageTag ]
         , Html.br [] []
         , text <| Maybe.withDefault "" description
         ]
@@ -171,7 +174,7 @@ contentNode model =
 
 footerNode : Html a
 footerNode =
-    div [ id "footer" ] [ Html.p [] [ text "Last updated 8-21-2018" ] ]
+    div [ id "footer" ] [ Html.p [] [ text "Last updated 11-23-2018" ] ]
 
 
 view : Model -> Html Msg

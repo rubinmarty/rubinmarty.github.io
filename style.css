@@ -73,10 +73,6 @@ a {
     color: #777;
 }
 
-.language {
-    color: #F88;
-}
-
 .inset {
     color: rgb(221, 221, 255);
     margin: 40px;
@@ -91,4 +87,10 @@ a {
 
 .project {
     margin-bottom: 2em;
+}
+
+.try-it {
+    font-size: 0.5em;
+    vertical-align: top;
+    color: #F88;
 }
